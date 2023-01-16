@@ -13,7 +13,8 @@ const port = 4000;
 
 const habitDataRouter = require("./router/habitDataRouter");
 app.use("/habitdata", habitDataRouter);
-
+const categoryDataRouter = require("./router/categoryDataRouter");
+app.use("/categorydata", categoryDataRouter);
 const localData = require("./data/data");
 app.get("/", (req, res) => {
   res.status(200).send(localData);
